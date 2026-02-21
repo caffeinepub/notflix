@@ -1,0 +1,17 @@
+{
+  "frontend/src/index.css": "Global styles with Netflix-inspired dark theme using OKLCH color system, featuring black background (#141414), red accent colors (#E50914), and custom scrollbar utilities.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Notflix color palette (notflix-black, notflix-red, notflix-gray) and Netflix-style typography using Helvetica Neue font family.",
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup for three routes (browse, upload, player) and ThemeProvider forcing dark mode.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for backend operations including film fetching, uploading with progress tracking, and client-side film list management using localStorage as workaround for missing getAllFilms backend method (fixed return type to string[] for useFilmsList).",
+  "frontend/src/components/Logo.tsx": "Reusable Notflix logo component with configurable size variants (sm, md, lg) displaying the generated logo image.",
+  "frontend/src/components/Navbar.tsx": "Fixed navigation bar with Notflix logo, navigation links, and upload button matching Netflix's layout style with dark background and red accents.",
+  "frontend/src/components/HeroBanner.tsx": "Hero banner component displaying featured content with cinematic gradient overlay, title, description, and action buttons in Netflix style.",
+  "frontend/src/components/FilmThumbnail.tsx": "Film thumbnail component with hover effects revealing title and description overlay, click navigation to player, and fallback to placeholder image (updated to use shrink-0 instead of flex-shrink-0).",
+  "frontend/src/components/FilmRow.tsx": "Horizontal scrolling film carousel with left/right navigation buttons, smooth scrolling, and responsive thumbnail display matching Netflix's content rows.",
+  "frontend/src/components/UploadFilmForm.tsx": "Film upload form with Internet Identity authentication, file inputs for thumbnail and video, upload progress tracking, and validation.",
+  "frontend/src/components/VideoPlayer.tsx": "Custom video player with Netflix-style controls including play/pause, seek bar, volume control, fullscreen toggle, and auto-hiding controls on mouse inactivity (fixed useRef initialization with null).",
+  "frontend/src/components/Footer.tsx": "Footer component with copyright notice and Caffeine.ai attribution link with UTM tracking parameters.",
+  "frontend/src/pages/BrowsePage.tsx": "Main browse page combining navbar, hero banner, and film rows displaying all uploaded films with loading states (refactored to call React hooks at top level instead of inside map callback, with support for up to 10 films and fixed type parameter).",
+  "frontend/src/pages/UploadPage.tsx": "Upload page with centered form layout, page header, and Netflix-style dark theme styling.",
+  "frontend/src/pages/PlayerPage.tsx": "Player page that fetches film data by ID from route params and renders VideoPlayer component with error handling."
+}

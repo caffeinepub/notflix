@@ -1,0 +1,131 @@
+{
+  "kind": "build_request",
+  "title": "Create Notflix - Netflix parody with custom film uploads",
+  "projectName": "Notflix",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a Netflix-inspired visual design with a dark theme (black background, red accents), matching Netflix's typography and layout patterns including hero banner, horizontal scrolling film rows, and similar navigation structure",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "it looks very, very similar to Netflix",
+          "it's called notflix"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dark color scheme with black background and red accent colors similar to Netflix branding",
+        "Hero banner section displaying featured content at the top of the page",
+        "Multiple horizontal scrolling rows for browsing films by category",
+        "Navigation bar with Notflix branding matching Netflix's layout style",
+        "Film thumbnails with hover effects showing title and brief description"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement film upload functionality allowing users to submit their own fake films with title, description, thumbnail image, and video file",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "I can upload my own films to",
+          "upload my own fake films"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Upload form accepting film title, description, genre/category, thumbnail image, and video file",
+        "Backend storage of film metadata and associated media files",
+        "Validation of required fields before submission",
+        "Success confirmation after successful upload",
+        "Uploaded films appear in the browsing interface"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a film browsing interface displaying all uploaded films organized by categories in horizontal scrolling rows, similar to Netflix's content discovery pattern",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "it looks very, very similar to Netflix"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Films organized into horizontal scrolling rows by category or genre",
+        "Thumbnail images for each film with title overlay on hover",
+        "Smooth horizontal scrolling navigation for each row",
+        "Clicking a film opens detailed view or playback interface",
+        "Responsive layout adapting to different screen sizes"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Build a video playback interface that displays the selected film with standard video controls (play, pause, seek, volume, fullscreen)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "upload my own films"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Full-screen video player with custom controls matching Netflix aesthetic",
+        "Play/pause, seek bar, volume control, and fullscreen toggle",
+        "Display film title and description in the player interface",
+        "Back button to return to browsing view",
+        "Video streams uploaded film content from backend storage"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Design and implement the Notflix logo and branding that parodies Netflix's visual identity while maintaining a distinct identity",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "it's called notflix",
+          "looks very, very similar to Netflix"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Notflix logo prominently displayed in navigation bar",
+        "Logo design references Netflix style but clearly distinguishes as Notflix",
+        "Consistent branding throughout the application",
+        "Red color scheme matching Netflix aesthetic"
+      ]
+    }
+  ],
+  "constraints": [
+    "Must use React with TypeScript for frontend",
+    "Must use Motoko for backend with single-actor architecture",
+    "Must style with Tailwind CSS",
+    "All files must be stored and served through the Internet Computer backend"
+  ],
+  "nonGoals": [
+    "Real Netflix content or licensed media",
+    "User authentication or multi-user accounts (use Internet Identity if auth is needed)",
+    "Content recommendations or personalization algorithms",
+    "Streaming quality adaptation or DRM protection",
+    "Social features like ratings, reviews, or sharing"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Notflix logo with red lettering on transparent background, Netflix-inspired typography (notflix-logo.dim_300x100.png)",
+      "Hero banner background image with dark cinematic gradient (hero-banner.dim_1920x800.png)",
+      "Placeholder film thumbnail for empty states showing film reel icon (placeholder-thumbnail.dim_300x450.png)"
+    ],
+    "edits": []
+  }
+}

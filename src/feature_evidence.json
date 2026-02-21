@@ -1,0 +1,108 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-netflix-inspired-visual-design-with-a-dark-theme-black-background-red-accents-matching-netflix-s-typography-and-layout-patterns-including-hero-banner-horizontal-scrolling-film-rows-and-similar-navigation-structure",
+      "featureTitle": "Create a Netflix-inspired visual design with a dark theme (black background, red accents), matching Netflix's typography and layout patterns including hero banner, horizontal scrolling film rows, and similar navigation structure",
+      "files": [
+        "frontend/src/components/FilmRow.tsx",
+        "frontend/src/components/FilmThumbnail.tsx",
+        "frontend/src/components/HeroBanner.tsx",
+        "frontend/src/components/Logo.tsx",
+        "frontend/src/components/Navbar.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-film-upload-functionality-allowing-users-to-submit-their-own-fake-films-with-title-description-thumbnail-image-and-video-file",
+      "featureTitle": "Implement film upload functionality allowing users to submit their own fake films with title, description, thumbnail image, and video file",
+      "files": [
+        "frontend/src/components/UploadFilmForm.tsx",
+        "frontend/src/pages/UploadPage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-film-browsing-interface-displaying-all-uploaded-films-organized-by-categories-in-horizontal-scrolling-rows-similar-to-netflix-s-content-discovery-pattern",
+      "featureTitle": "Create a film browsing interface displaying all uploaded films organized by categories in horizontal scrolling rows, similar to Netflix's content discovery pattern",
+      "files": [
+        "frontend/src/pages/BrowsePage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-video-playback-interface-that-displays-the-selected-film-with-standard-video-controls-play-pause-seek-volume-fullscreen",
+      "featureTitle": "Build a video playback interface that displays the selected film with standard video controls (play, pause, seek, volume, fullscreen)",
+      "files": [
+        "frontend/src/components/VideoPlayer.tsx",
+        "frontend/src/pages/PlayerPage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-and-implement-the-notflix-logo-and-branding-that-parodies-netflix-s-visual-identity-while-maintaining-a-distinct-identity",
+      "featureTitle": "Design and implement the Notflix logo and branding that parodies Netflix's visual identity while maintaining a distinct identity",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

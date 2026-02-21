@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Notflix - A Netflix parody web app where users can upload their own fake films. The UI should closely mimic Netflix's design and branding.",
+  "architectural_notes": [
+    "Web application mimicking Netflix UI/UX",
+    "User-generated content (film uploads) storage required",
+    "Video streaming/playback capability needed"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Notflix logo with red lettering on transparent background, Netflix-inspired typography (notflix-logo.dim_300x100.png)\n- Hero banner background image with dark cinematic gradient (hero-banner.dim_1920x800.png)\n- Placeholder film thumbnail for empty states showing film reel icon (placeholder-thumbnail.dim_300x450.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-netflix-inspired-visual-design-with-a-dark-theme-black-background-red-accents-matching-netflix-s-typography-and-layout-patterns-including-hero-banner-horizontal-scrolling-film-rows-and-similar-navigation-structure",
+      "title": "Create a Netflix-inspired visual design with a dark theme (black background, red accents), matching Netflix's typography and layout patterns including hero banner, horizontal scrolling film rows, and similar navigation structure",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-film-upload-functionality-allowing-users-to-submit-their-own-fake-films-with-title-description-thumbnail-image-and-video-file",
+      "title": "Implement film upload functionality allowing users to submit their own fake films with title, description, thumbnail image, and video file",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-film-browsing-interface-displaying-all-uploaded-films-organized-by-categories-in-horizontal-scrolling-rows-similar-to-netflix-s-content-discovery-pattern",
+      "title": "Create a film browsing interface displaying all uploaded films organized by categories in horizontal scrolling rows, similar to Netflix's content discovery pattern",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-video-playback-interface-that-displays-the-selected-film-with-standard-video-controls-play-pause-seek-volume-fullscreen",
+      "title": "Build a video playback interface that displays the selected film with standard video controls (play, pause, seek, volume, fullscreen)",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-and-implement-the-notflix-logo-and-branding-that-parodies-netflix-s-visual-identity-while-maintaining-a-distinct-identity",
+      "title": "Design and implement the Notflix logo and branding that parodies Netflix's visual identity while maintaining a distinct identity",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Netflix-like UI design and layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Film upload functionality for users",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Film browsing and playback interface",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Notflix",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

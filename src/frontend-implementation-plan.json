@@ -1,0 +1,141 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Notflix - Netflix Parody Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create Netflix-inspired visual design with dark theme, hero banner, and horizontal scrolling film rows",
+      "acceptanceCriteria": [
+        "Dark color scheme with black background and red accent colors similar to Netflix branding",
+        "Hero banner section displaying featured content at the top of the page",
+        "Multiple horizontal scrolling rows for browsing films by category",
+        "Navigation bar with Notflix branding matching Netflix's layout style",
+        "Film thumbnails with hover effects showing title and brief description"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add Netflix-inspired global styles: dark theme with black background (#141414), red accent colors (#E50914), and Netflix-like typography. Include CSS custom properties for consistent theming throughout the app."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind configuration with Netflix color palette (notflix-black: #141414, notflix-red: #E50914, notflix-gray: #2F2F2F) and custom typography settings matching Netflix's font hierarchy."
+        },
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "create",
+          "description": "Create navigation bar component with Notflix logo (using generated image at frontend/public/assets/generated/notflix-logo.dim_300x100.png), dark background, and Netflix-style layout. Include navigation links and sticky positioning. Wire logo to navigate to home page and include link to upload page."
+        },
+        {
+          "path": "frontend/src/components/HeroBanner.tsx",
+          "operation": "create",
+          "description": "Create hero banner component displaying featured film with dark cinematic gradient background (using generated image at frontend/public/assets/generated/hero-banner.dim_1920x800.png). Include film title, description, and action buttons matching Netflix hero section design."
+        },
+        {
+          "path": "frontend/src/components/FilmRow.tsx",
+          "operation": "create",
+          "description": "Create horizontal scrolling film row component that displays film thumbnails in a Netflix-style carousel. Include smooth horizontal scroll, hover effects showing title and description overlay, and responsive thumbnail sizing. Use the blob-storage component's ExternalBlob.getDirectURL() for thumbnail images. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/FilmThumbnail.tsx",
+          "operation": "create",
+          "description": "Create film thumbnail component with hover effects that reveal title and brief description. Include loading state that uses the placeholder thumbnail (frontend/public/assets/generated/placeholder-thumbnail.dim_300x450.png) for empty states. Use ExternalBlob.getDirectURL() for displaying film thumbnail images. Wire thumbnail clicks to navigate to player page with film ID."
+        },
+        {
+          "path": "frontend/src/components/Logo.tsx",
+          "operation": "create",
+          "description": "Create reusable Logo component that displays the Notflix logo (frontend/public/assets/generated/notflix-logo.dim_300x100.png) with consistent sizing and styling. Include props for different size variants if needed across the application."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement film upload functionality with form for title, description, thumbnail, and video file",
+      "acceptanceCriteria": [
+        "Upload form accepting film title, description, genre/category, thumbnail image, and video file",
+        "Backend storage of film metadata and associated media files",
+        "Validation of required fields before submission",
+        "Success confirmation after successful upload",
+        "Uploaded films appear in the browsing interface"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/UploadFilmForm.tsx",
+          "operation": "create",
+          "description": "Create film upload form component with fields for title (text input), description (textarea), thumbnail (image file input), and video (video file input). Use the blob-storage component's ExternalBlob.fromBytes() to handle file uploads with progress tracking via withUploadProgress(). Include validation for required fields, file type restrictions (images for thumbnail, videos for film), and call backend.uploadFilm() on submission. Display upload progress for both thumbnail and video. Show success message on completion and error handling for failed uploads. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/UploadPage.tsx",
+          "operation": "create",
+          "description": "Create upload page that renders the UploadFilmForm component with Netflix-style dark theme layout. Include page header and navigation back to browse view."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create film browsing interface with category-organized horizontal scrolling rows",
+      "acceptanceCriteria": [
+        "Films organized into horizontal scrolling rows by category or genre",
+        "Thumbnail images for each film with title overlay on hover",
+        "Smooth horizontal scrolling navigation for each row",
+        "Clicking a film opens detailed view or playback interface",
+        "Responsive layout adapting to different screen sizes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/BrowsePage.tsx",
+          "operation": "create",
+          "description": "Create main browse page combining Navbar, HeroBanner, and multiple FilmRow components. Fetch films from backend and organize into categories. Include responsive layout that adapts to different screen sizes. This page serves as the main landing page for the application."
+        },
+        {
+          "path": "frontend/src/hooks/useFilms.ts",
+          "operation": "create",
+          "description": "Create custom hook to fetch and manage film data from backend. Handle loading states, errors, and data caching. Use backend.getFilm() to retrieve film details including ExternalBlob references for thumbnails and videos."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build video playback interface with standard controls matching Netflix aesthetic",
+      "acceptanceCriteria": [
+        "Full-screen video player with custom controls matching Netflix aesthetic",
+        "Play/pause, seek bar, volume control, and fullscreen toggle",
+        "Display film title and description in the player interface",
+        "Back button to return to browsing view",
+        "Video streams uploaded film content from backend storage"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/VideoPlayer.tsx",
+          "operation": "create",
+          "description": "Create custom video player component with Netflix-style controls (play/pause, seek bar, volume, fullscreen). Display film title and description overlay. Include back button to return to browse view. Use ExternalBlob.getDirectURL() from the blob-storage component to stream video content with browser caching support. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/PlayerPage.tsx",
+          "operation": "create",
+          "description": "Create player page that renders VideoPlayer component in fullscreen layout. Fetch film data based on route parameter and pass to VideoPlayer. Include dark background matching Netflix player aesthetic."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Design and implement Notflix logo and branding that parodies Netflix visual identity",
+      "acceptanceCriteria": [
+        "Notflix logo prominently displayed in navigation bar",
+        "Logo design references Netflix style but clearly distinguishes as Notflix",
+        "Consistent branding throughout the application",
+        "Red color scheme matching Netflix aesthetic"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Configure React Router with routes for BrowsePage (/), UploadPage (/upload), and PlayerPage (/player/:filmId). Ensure all pages are properly wired and accessible through navigation. Set BrowsePage as the default route."
+        }
+      ]
+    }
+  ]
+}
